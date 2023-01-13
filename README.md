@@ -107,18 +107,18 @@ docker run -d -p 8080:8080 <IMAGE_NAME>
 To run the project  first execute the below commmand.
 MONGO DB URL: 
 ```
-mongodb+srv://iNeuron:RsPGmJUa69n558n@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://<username>:<password>@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority
 ```
 windows user
 
 ```
-MONGO_DB_URL=mongodb+srv://iNeuron:RsPGmJUa69n558n@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority
+MONGO_DB_URL=mongodb+srv://<username>:<password>@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority
 ```
 
 Linux user
 
 ```
-export MONGO_DB_URL=mongodb+srv://iNeuron:RsPGmJUa69n558n@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority
+export MONGO_DB_URL=mongodb+srv://<username>:<password>@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority
 ```
 
 then run 
