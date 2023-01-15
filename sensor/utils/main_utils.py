@@ -1,6 +1,8 @@
 import yaml
 import numpy as np
 from sensor.exception import SensorException
+from sensor.logger import logging
+import dill
 import os,sys
 
 def read_yaml_file(file_path: str) -> dict:
@@ -44,6 +46,17 @@ def load_numpy_array_data(file_path: str, array: np.array):
     return: np.array data loaded
     """
     try:
-        pass
+        with open(file_path, "rb") as file_obj:
+            return np.load(file_obj)
+    except Exception as e:
+        raise SensorException(e,sys)
+    
+def save_object(file_path: str, obj: object) -> None:
+    try:
+        logging.info("Entered the save_object method of MainUtils class")
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, "wb") as file_obj:
+            dill.dump(obj, file_obj)
+        logging.info("Exited the save_object method of MainUtils class")
     except Exception as e:
         raise SensorException(e,sys)
