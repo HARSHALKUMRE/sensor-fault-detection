@@ -16,4 +16,20 @@ class TargetValueMapping:
     
 # write a code to train model and check the accuracy of the model.
 
-        
+
+class SensorModel:
+
+
+    def __init__(self, preprocessor, model):
+        try:
+            self.preprocessor = preprocessor
+            self.model = model
+        except Exception as e:
+            raise e 
+    
+    def get_best_model():
+        try:
+            x_transform = self.preprocessor.transform(x)
+            y_hat = self.model.predict(x_transform)
+        except Exception as e:
+            raise e
