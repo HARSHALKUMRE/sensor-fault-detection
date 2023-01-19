@@ -63,7 +63,7 @@ class ModelTrainer:
             #overfitting and underfitting   
             diff = abs(classification_train_metric.f1_score-classification_test_metric.f1_score)
 
-            if diff>self.model_trainer_config.overfitting_underfitting_threshold:
+            if diff > self.model_trainer_config.overfitting_underfitting_threshold:
                 raise Exception("Model is not good try to do more experiements.")
 
 
@@ -83,3 +83,5 @@ class ModelTrainer:
             return model_trainer_artifact
         except Exception as e:
             raise SensorException(e,sys)   
+
+            
